@@ -1,0 +1,22 @@
+<br><br>
+
+<a routerLink="create" class="btn btn-info">Add Group</a>
+<br><br>
+<table class="table">
+  <br>
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let list of listGroup, let i = index">
+    <th scope="row">{{i + 1}}</th>
+    <td>{{list.name}}</td>
+    <td>
+      <a (click)="deleteGroup(i)" class="btn btn-danger">Delete</a></td>
+  </tr>
+  </tbody>
+</table>
